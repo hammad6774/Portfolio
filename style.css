@@ -1178,6 +1178,30 @@
             margin-top: .2rem
         }
 
+        .cert-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .cert-link {
+            display: inline-flex;
+            align-items: center;
+            margin-top: 0.8rem;
+            font-family: var(--ff-m);
+            font-size: 0.65rem;
+            color: var(--acc);
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: color 0.3s, transform 0.3s;
+        }
+
+        .cert-link:hover {
+            color: var(--grn);
+            transform: translateX(4px);
+        }
+
         /* ─── EDUCATION ─── */
         .edu-card {
             background: var(--bg2);
