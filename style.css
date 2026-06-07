@@ -24,7 +24,8 @@
         }
 
         html {
-            scroll-behavior: smooth
+            scroll-behavior: smooth;
+            overflow-x: hidden;
         }
 
         body {
@@ -32,7 +33,7 @@
             color: var(--text);
             font-family: var(--ff-b);
             overflow-x: hidden;
-            cursor: none
+            cursor: none;
         }
 
         a {
@@ -198,13 +199,25 @@
             display: flex;
             align-items: center;
             justify-content: space-between;
-            transition: background .3s, border-color .3s, backdrop-filter .3s;
+            transition: padding .3s;
         }
 
-        nav.scrolled {
+        nav::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            z-index: -1;
+            background: transparent;
+            border-bottom: 1px solid transparent;
+            transition: background .3s, border-color .3s, backdrop-filter .3s;
+            pointer-events: none;
+        }
+
+        nav.scrolled::before {
             background: rgba(6, 12, 24, .9);
             backdrop-filter: blur(22px);
-            border-bottom: 1px solid var(--border)
+            -webkit-backdrop-filter: blur(22px);
+            border-bottom: 1px solid var(--border);
         }
 
         .logo {
@@ -383,7 +396,8 @@
             max-width: 1160px;
             margin: 0 auto;
             position: relative;
-            z-index: 2
+            z-index: 2;
+            overflow: hidden;
         }
 
         .h-glow1 {
