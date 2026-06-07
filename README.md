@@ -2,7 +2,7 @@
 
 > A dark, minimal, tech-inspired personal portfolio website built with pure HTML, CSS, and JavaScript.
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://your-vercel-url.vercel.app)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://hammad-devops.vercel.app/)
 [![GitHub](https://img.shields.io/badge/GitHub-hammad6774-181717?style=for-the-badge&logo=github)](https://github.com/hammad6774)
 
 ---
