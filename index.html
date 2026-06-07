@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <title>Hammad Ullah Javed — DevOps Engineer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=Figtree:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <!-- BOOT SCREEN -->
+    <div id="boot">
+        <div id="boot-inner">
+            <p id="boot-logo">H_JV</p>
+            <div id="boot-lines">
+                <div class="bl" id="bl0">$ INIT SYSTEM ENVIRONMENT...</div>
+                <div class="bl" id="bl1">$ LOADING PROFILE MODULES... <span class="ok">OK</span></div>
+                <div class="bl" id="bl2">$ MOUNTING PORTFOLIO... <span class="ok">OK</span></div>
+                <div class="bl" id="bl3">$ ESTABLISHING CONNECTIONS... <span class="ok">OK</span></div>
+                <div class="bl" id="bl4">$ READY. <span class="blink">_</span></div>
+            </div>
+            <div id="boot-bar-wrap">
+                <div id="boot-bar"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MATRIX -->
+    <canvas id="mtx"></canvas>
+
+    <!-- OVERLAYS -->
+    <div id="scan"></div>
+    <div id="gbg"></div>
+
+    <!-- CURSOR -->
+    <div id="cur"></div>
+    <div id="cur-ring"></div>
+
+    <!-- NAV -->
+    <nav id="nav">
+        <div class="logo">
+            <div class="status-dot"></div>H<em>.</em>Javed
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="./Resume.pdf" download="Hammad_Ullah_Javed_CV.pdf" class="nav-cv">↓ Resume</a>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+        <div class="h-glow1"></div>
+        <div class="h-glow2"></div>
+        <div class="eyebrow">Available for Opportunities</div>
+        <h1 class="hero-name">
+            Hammad<br>
+            <span class="line2 glitch" data-text="Ullah.">Ullah.</span>
+        </h1>
+        <div class="hero-role"><span id="typed"></span><span class="blink">|</span></div>
+        <p class="hero-desc">Aspiring DevOps Engineer specialising in Linux environments, Python automation, and
+            scalable deployment workflows. Building reliable infrastructure, one script at a time.</p>
+        <div class="hero-cta">
+            <a href="#projects" class="btn-p">View Projects</a>
+            <a href="#contact" class="btn-s">Get In Touch</a>
+            <a href="./Resume.pdf" download="Hammad_Ullah_Javed_CV.pdf" class="btn-dl">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                    <path
+                        d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+                </svg>
+                Download CV
+            </a>
+        </div>
+        <div class="scroll-hint"><span>Scroll</span>
+            <div class="scroll-line"></div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <div class="wrap" id="about">
+        <section id="about-s" style="padding:0">
+            <div class="fu">
+                <div class="lbl">// 01 — About</div>
+                <h2 class="h2">Driven by <em>Systems</em><br>&amp; Automation</h2>
+                <p class="about-text">I'm a <strong>CS undergraduate at Foundation University Islamabad</strong>,
+                    passionate about building efficient, reliable infrastructure. My focus is <strong>Linux system
+                        administration</strong>, <strong>Python automation</strong>, and <strong>DevOps
+                        practices</strong> that eliminate manual overhead.<br /><br />I enjoy writing code that makes
+                    systems smarter — from autonomous disk health monitoring to CI/CD pipelines. My stint in
+                    <strong>WordPress development</strong> gave me a full-stack perspective on web infrastructure at
+                    scale.
+                </p>
+                <div class="stats">
+                    <div class="stat fu d1">
+                        <div class="stat-n" data-count="2" data-suffix="+">0</div>
+                        <div class="stat-l">Projects Built</div>
+                    </div>
+                    <div class="stat fu d2">
+                        <div class="stat-n" data-count="2">0</div>
+                        <div class="stat-l">Certifications</div>
+                    </div>
+                    <div class="stat fu d3">
+                        <div class="stat-n" data-count="1" data-suffix="+">0</div>
+                        <div class="stat-l">Years Exp.</div>
+                    </div>
+                    <div class="stat fu d4">
+                        <div class="stat-n">∞</div>
+                        <div class="stat-l">Lines of Bash</div>
+                    </div>
+                </div>
+            </div>
+            <div class="fu d2">
+                <div class="terminal">
+                    <div class="t-head">
+                        <div class="dot dot-r"></div>
+                        <div class="dot dot-y"></div>
+                        <div class="dot dot-g"></div>
+                        <span class="t-ttl">hammad@devops:~$</span>
+                    </div>
+                    <div class="t-body">
+                        <div class="trow"><span class="tprompt">❯</span><span class="tcmd">cat whoami.json</span></div>
+                        <div class="trow"><span class="tout">{</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"name"</span>: <span
+                                    class="tval">"Hammad Ullah Javed"</span>,</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"role"</span>: <span
+                                    class="tval">"Aspiring DevOps Engineer"</span>,</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"os"</span>: <span
+                                    class="tval">"Linux (Ubuntu)"</span>,</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"stack"</span>: [<span
+                                    class="tval">"Python"</span>,<span class="tval">"Docker"</span>,<span
+                                    class="tval">"Bash"</span>],</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"focus"</span>: [<span
+                                    class="tval">"CI/CD"</span>,<span class="tval">"Automation"</span>],</span></div>
+                        <div class="trow"><span class="tout">&nbsp;&nbsp;<span class="tkey">"status"</span>: <span
+                                    class="tgrn">"Open_to_work"</span></span></div>
+                        <div class="trow"><span class="tout">}</span></div>
+                        <div class="trow" style="margin-top:.5rem"><span class="tprompt">❯</span><span class="tcmd"
+                                style="animation:blink 1.2s infinite">_</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- SKILLS -->
+    <div class="wrap" id="skills">
+        <div class="lbl fu">// 02 — Skills</div>
+        <h2 class="h2 fu">Technical <em>Arsenal</em></h2>
+        <div class="divider"></div>
+        <div class="skills-grid">
+            <div class="sk-card fu d1">
+                <div class="sk-icon">🐧</div>
+                <div class="sk-cat">OS &amp; Scripting</div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Linux (Ubuntu)</span><span
+                            class="sk-row-pct">88%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="88"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Bash Scripting</span><span
+                            class="sk-row-pct">82%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="82"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Python (Automation)</span><span
+                            class="sk-row-pct">76%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="76"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Cron Jobs</span><span
+                            class="sk-row-pct">82%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="82"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sk-card fu d2">
+                <div class="sk-icon">⚙️</div>
+                <div class="sk-cat">DevOps &amp; Cloud</div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Git / GitHub</span><span
+                            class="sk-row-pct">85%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="85"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Docker</span><span class="sk-row-pct">68%</span>
+                    </div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="68"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">CI/CD Pipelines</span><span
+                            class="sk-row-pct">62%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="62"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Web Deployment</span><span
+                            class="sk-row-pct">75%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="75"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="sk-card fu d3">
+                <div class="sk-icon">🛠️</div>
+                <div class="sk-cat">Core Technical</div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">System Monitoring</span><span
+                            class="sk-row-pct">74%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="74"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">SQL</span><span class="sk-row-pct">62%</span>
+                    </div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="62"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">WordPress</span><span
+                            class="sk-row-pct">72%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="72"></div>
+                    </div>
+                </div>
+                <div class="sk-row">
+                    <div class="sk-row-head"><span class="sk-row-name">Web Hosting</span><span
+                            class="sk-row-pct">70%</span></div>
+                    <div class="sk-track">
+                        <div class="sk-fill" data-pct="70"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EXPERIENCE -->
+    <div class="wrap" id="experience">
+        <div class="lbl fu">// 03 — Experience</div>
+        <h2 class="h2 fu">Work <em>History</em></h2>
+        <div class="divider"></div>
+        <div class="tline fu">
+            <div class="tl-item">
+                <div class="tl-dot"></div>
+                <div class="tl-date">July 2025 — Dec 2025</div>
+                <div class="tl-title">WordPress Web Developer</div>
+                <div class="tl-co">Ataraxy Developers · Rawalpindi, Pakistan</div>
+                <div class="tl-pts">
+                    <div class="tl-pt">Engineered and maintained fully functional WordPress sites
+                        (urbaneterprisespk.com) using Elementor, ensuring technical stability and high performance
+                        through routine updates.</div>
+                    <div class="tl-pt">Ensured cross-browser compatibility and mobile responsiveness across all
+                        developed platforms.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <div class="wrap" id="projects">
+        <div class="lbl fu">// 04 — Projects</div>
+        <h2 class="h2 fu">Featured <em>Work</em></h2>
+        <div class="divider"></div>
+        <div class="projects-grid">
+            <div class="proj fu d1">
+                <div class="proj-top-line"></div>
+                <div class="proj-num">Project // 01</div>
+                <div class="proj-title">Autonomous System Health &amp; Disk Management Bot</div>
+                <div class="proj-desc">A Python automation tool that monitors disk storage and prevents server downtime
+                    through proactive threshold alerts. Auto-compresses and archives directories when storage exceeds
+                    80%, with Cron Job scheduling and full I/O logging for autonomous system auditing.</div>
+                <div class="proj-tags">
+                    <span class="ptag">Python</span><span class="ptag">Cron Jobs</span><span
+                        class="ptag">Linux</span><span class="ptag">Automation</span><span class="ptag">I/O
+                        Logging</span>
+                </div>
+            </div>
+            <div class="proj fu d2">
+                <div class="proj-top-line"></div>
+                <div class="proj-num">Project // 02</div>
+                <div class="proj-title">Linux Shell Scripting for DevOps Automation</div>
+                <div class="proj-desc">A suite of Bash scripts built from scratch to automate system tasks using loops,
+                    conditionals, and exit status handling. Includes automated file archiving, Linux CLI file-system
+                    management, and streamlined administrative processes.</div>
+                <div class="proj-tags">
+                    <span class="ptag">Bash</span><span class="ptag">Shell Scripting</span><span class="ptag">Linux
+                        CLI</span><span class="ptag">DevOps</span><span class="ptag">File Mgmt</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CERTIFICATIONS -->
+    <div class="wrap" id="certifications">
+        <div class="lbl fu">// 05 — Certifications</div>
+        <h2 class="h2 fu"><em>Certified</em> Skills</h2>
+        <div class="divider"></div>
+        <div class="certs-grid">
+            <div class="cert fu d1">
+                <div class="cert-ic">🎓</div>
+                <div>
+                    <div class="cert-name">Linux: Intro to Shell Scripting for DevOps</div>
+                    <div class="cert-by">Coursera</div>
+                    <div class="cert-dt">March 2026</div>
+                </div>
+            </div>
+            <div class="cert fu d2">
+                <div class="cert-ic">📁</div>
+                <div>
+                    <div class="cert-name">Files &amp; Directories in the Linux Filesystem</div>
+                    <div class="cert-by">Coursera</div>
+                    <div class="cert-dt">December 2025</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EDUCATION -->
+    <div class="wrap" id="education">
+        <div class="lbl fu">// 06 — Education</div>
+        <h2 class="h2 fu">Academic <em>Background</em></h2>
+        <div class="divider"></div>
+        <div class="edu-card fu">
+            <div>
+                <div class="edu-deg">B.S. Computer Science</div>
+                <div class="edu-uni">Foundation University Islamabad</div>
+                <div class="edu-pd">Sept 2023 — Present</div>
+                <div class="cw-lbl">Relevant Coursework</div>
+                <div class="cw-tags">
+                    <span class="cwtag">Operating Systems</span><span class="cwtag">Computer Networks</span><span
+                        class="cwtag">OOP</span>
+                    <span class="cwtag">Advanced DBMS</span><span class="cwtag">Data Structures &amp; Algorithms</span>
+                    <span class="cwtag">Artificial Intelligence</span><span class="cwtag">Web Engineering</span><span
+                        class="cwtag">Mobile App Dev</span>
+                </div>
+            </div>
+            <div>
+                <div class="edu-badge">In Progress</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTACT -->
+    <div class="wrap" id="contact" style="text-align:center">
+        <section id="ct-s" style="padding:0">
+            <div class="lbl fu" style="justify-content:center">// 07 — Contact</div>
+            <h2 class="h2 fu">Let's <em>Connect</em></h2>
+            <p class="ct-sub fu">Open to DevOps roles, internships, and collaborations. Drop a message and let's build
+                something reliable together.</p>
+            <div class="ct-links fu">
+                <a href="mailto:hammadu689@gmail.com" class="ct-link ct-email">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>Email
+                </a>
+                <a href="https://github.com/hammad6774" target="_blank" class="ct-link ct-github">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z" />
+                    </svg>GitHub
+                </a>
+                <a href="https://www.linkedin.com/in/hammad28/" target="_blank" class="ct-link ct-linkedin">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path
+                            d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" />
+                    </svg>LinkedIn
+                </a>
+                <a href="tel:+923064063152" class="ct-link ct-phone">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                        <path
+                            d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>Phone
+                </a>
+            </div>
+            <div class="ct-dl-wrap fu">
+                <a href="./Resume.pdf" download="Hammad_Ullah_Javed_CV.pdf" class="ct-dl">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                        <path
+                            d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 004.561 21h14.878a2 2 0 001.94-1.515L22 17" />
+                    </svg>
+                    View Resume
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <!-- STATUS BAR -->
+    <div id="sbar">
+        <div class="sb-item">
+            <div class="sb-dot"></div><span class="sb-grn">SYSTEM ONLINE</span>
+        </div>
+        <div class="sb-item"><span class="sb-acc">OS:</span> LINUX UBUNTU</div>
+        <div class="sb-item"><span class="sb-acc">ROLE:</span> DEVOPS ENGINEER</div>
+        <div class="sb-item"><span class="sb-acc">STATUS:</span> <span class="sb-grn">OPEN_TO_WORK</span></div>
+        <div class="sb-spacer"></div>
+        <div class="sb-item"><span class="sb-acc">LOC:</span> RAWALPINDI, PK</div>
+        <div class="sb-item" id="sbar-time"></div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="ft">© 2026 <em>Hammad Ullah Javed</em> — Aspiring DevOps Engineer</div>
+        <div class="ft">Designed &amp; Coded with <em>♥</em></div>
+    </footer>
+
+    <script src="./script.js" defer></script>
+</body>
+
+</html>
