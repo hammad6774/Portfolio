@@ -29,6 +29,8 @@
 
 <body>
 
+    <div id="top" aria-hidden="true"></div>
+
     <!-- BOOT SCREEN -->
     <div id="boot">
         <div id="boot-inner">
@@ -59,9 +61,9 @@
 
     <!-- NAV -->
     <nav id="nav">
-        <div class="logo">
+        <a href="#top" class="logo" aria-label="Scroll to top">
             <div class="status-dot"></div>H<em>.</em>Javed
-        </div>
+        </a>
         <ul class="nav-links">
             <li><a href="#about">About</a></li>
             <li><a href="#skills">Skills</a></li>
@@ -450,7 +452,38 @@
         <div class="ft">Designed &amp; Coded with <em>♥</em></div>
     </footer>
 
-    <script src="./script.js" defer></script>
+    <script>
+        (function () {
+            var logo = document.querySelector('.logo');
+            if (!logo) return;
+            logo.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.body.classList.remove('menu-open');
+                var menu = document.querySelector('.nav-links');
+                var toggle = document.querySelector('.menu-toggle');
+                if (menu) menu.classList.remove('active');
+                if (toggle) toggle.classList.remove('active');
+                var start = window.scrollY || document.documentElement.scrollTop || document.body.scrollTop || 0;
+                if (start <= 0) return;
+                var t0 = performance.now();
+                function step(t) {
+                    var p = Math.min((t - t0) / 650, 1);
+                    var next = Math.round(start * (1 - Math.pow(1 - p, 3)));
+                    document.documentElement.scrollTop = next;
+                    document.body.scrollTop = next;
+                    window.scrollTo(0, next);
+                    if (p < 1) requestAnimationFrame(step);
+                    else {
+                        document.documentElement.scrollTop = 0;
+                        document.body.scrollTop = 0;
+                        window.scrollTo(0, 0);
+                    }
+                }
+                requestAnimationFrame(step);
+            });
+        })();
+    </script>
+    <script src="./script.js?v=3" defer></script>
 </body>
 
 </html>
